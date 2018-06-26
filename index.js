@@ -11,6 +11,7 @@ function setCart(c) {
 
 function addToCart(item) {
  // write your code here
+<<<<<<< HEAD
  var price = Math.floor((Math.random() * 100) + 1)
  var item = {
    itemName: item,
@@ -18,6 +19,15 @@ function addToCart(item) {
  };
  cart.push(item);
  return `${item.itemName} has been added to your cart.`
+=======
+ var price = Math.floor((Math.random() * 100) + 0)
+ var newItem = {
+   itemName: item,
+   itemPrice: price
+ };
+ cart.push(newItem);
+ return `${newItem.itemName} has been added to your cart.`
+>>>>>>> 3fd3efe3ee60e9612c6443a4585d31120eda11cd
 }
 
 function viewCart() {
@@ -30,6 +40,7 @@ function viewCart() {
   } else {
     var multiple = '';
     for (var i = 0; i < cart.length - 1; i++) {
+<<<<<<< HEAD
       //var iInt = parseInt(i);
       //var singleItem = cart[iInt].itemName
       //var singlePrice = cart[iInt].itemPrice
@@ -37,6 +48,12 @@ function viewCart() {
       multiple += single
     }
     return cartContents = cartContents + multiple + `and ${cart[cart.length - 1].itemName} at $${cart[cart.length - 1].itemPrice}.`
+=======
+      var single = `${cart[i].itemName} at $${cart[i].itemPrice}, `
+      multiple.concat(single);
+    }
+    return cartContents = cartContents + multiple + `and ${cart[cart.length].itemName} at $${cart[cart.length].itemPrice}.`
+>>>>>>> 3fd3efe3ee60e9612c6443a4585d31120eda11cd
   }
 }
 
